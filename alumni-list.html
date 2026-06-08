@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alumni Directory &middot; Wealth Management Center</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="https://wmc.org.ph/wp-content/uploads/2022/10/WMC_logohorizontal_blue-1-194x75.png" alt="WMC" style="filter:brightness(0) invert(1);">
+    </a>
+    <ul class="nav__menu" id="nav-menu">
+      <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+      <li class="nav__item"><a href="about.html" class="nav__link">About Us &#9660;</a>
+        <div class="nav__dropdown">
+          <a href="about.html">About WMC</a>
+          <a href="founder.html">Message from the Founder</a>
+          <a href="board.html">Board of Directors</a>
+          <a href="partner.html">Our Industry Partner</a>
+        </div>
+      </li>
+      <li class="nav__item"><a href="courses.html" class="nav__link">Courses &#9660;</a>
+        <div class="nav__dropdown">
+          <a href="cwp.html">Certified Wealth Planner (CWP)</a>
+          <a href="cepp.html">Estate Planning (CEPP)</a>
+          <a href="items.html">ITEMS Seminar</a>
+        </div>
+      </li>
+      <li class="nav__item"><a href="alumni.html" class="nav__link">Alumni &#9660;</a>
+        <div class="nav__dropdown">
+          <a href="alumni.html">Alumni Testimonials</a>
+          <a href="alumni-list.html">Alumni List</a>
+        </div>
+      </li>
+      <li class="nav__item"><a href="gallery.html" class="nav__link">Gallery</a></li>
+      <li class="nav__item"><a href="resources.html" class="nav__link">Resources</a></li>
+      <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+    </ul>
+    <button class="nav__toggle" id="nav-toggle"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="page-content">
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="page-hero__eyebrow">WMC Alumni Directory</div>
+      <h1 class="page-hero__title">Our Certified Alumni</h1>
+      <p class="page-hero__sub">Over 300 Filipino financial professionals who chose to level up. Search by name or filter by designation.</p>
+    </div>
+  </div>
+  <section class="alumni-list">
+    <div class="container">
+      <div class="alumni-search-bar">
+        <input type="text" id="alumni-search" placeholder="&#128269; Search by name&hellip;">
+        <div class="alumni-filter-btns">
+          <button class="filter-btn active" data-desig="all">All</button>
+          <button class="filter-btn" data-desig="cwp">CWP&reg;</button>
+          <button class="filter-btn" data-desig="crpp">CRPP&reg;</button>
+          <button class="filter-btn" data-desig="cepp">CEPP&reg;</button>
+          <button class="filter-btn" data-desig="awp">AWP</button>
+        </div>
+      </div>
+      <p class="alumni-count" id="alumni-count">Showing <span>370</span> alumni</p>
+      <table class="alumni-table">
+        <thead><tr><th>Last Name</th><th>First Name</th><th>Designation(s)</th></tr></thead>
+        <tbody><tr class="alumni-row" data-name="remedios abcede" data-desig="cwp"><td>Abcede</td><td>Remedios</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="may joan abellana" data-desig="cwp"><td>Abellana</td><td>May Joan</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="marita abellera" data-desig="cwp"><td>Abellera</td><td>Marita</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="paterno abellera" data-desig="cwp"><td>Abellera</td><td>Paterno</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="cyril abonita" data-desig="cwp"><td>Abonita</td><td>Cyril</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="mary joy abua" data-desig="cwp"><td>Abua</td><td>Mary Joy</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="karen mae acebu" data-desig="crpp,cepp"><td>Acebu</td><td>Karen Mae</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="chatty acelo" data-desig="crpp,cepp"><td>Acelo</td><td>Chatty</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="billy ray acosta" data-desig="cwp"><td>Acosta</td><td>Billy Ray</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="angeli acot" data-desig="awp"><td>Acot</td><td>Angeli</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="madelyn afungol" data-desig="awp"><td>Afungol</td><td>Madelyn</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="ma corazon aguada-cruz" data-desig="cwp"><td>Aguada-Cruz</td><td>Ma Corazon</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="kris aguda" data-desig="cwp"><td>Aguda</td><td>Kris</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="lisette aguila" data-desig="awp"><td>Aguila</td><td>Lisette</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="kevin michael aguinaldo" data-desig="cwp"><td>Aguinaldo</td><td>Kevin Michael</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="rowena agustin" data-desig="cwp"><td>Agustin</td><td>Rowena</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="karlo jones algozo" data-desig="crpp,cepp"><td>Algozo</td><td>Karlo Jones</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="margarita alias" data-desig="cwp"><td>Alias</td><td>Margarita</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="irelyn almaden" data-desig="awp"><td>Almaden</td><td>Irelyn</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="chrispaul alvarez" data-desig="crpp,cepp"><td>Alvarez</td><td>Chrispaul</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="mildred anne amoranto" data-desig="cwp"><td>Amoranto</td><td>Mildred Anne</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="mary ann ang" data-desig="crpp,cepp"><td>Ang</td><td>Mary Ann</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="gloria ang" data-desig="cwp"><td>Ang</td><td>Gloria</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="katrina vanessa ang gobonseng" data-desig="cwp"><td>Ang Gobonseng</td><td>Katrina Vanessa</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="sheila marie angas" data-desig="cwp"><td>Angas</td><td>Sheila Marie</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="aldon honor apa-ap" data-desig="cwp"><td>Apa-Ap</td><td>Aldon Honor</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="leny joy apilado marasigan" data-desig="awp"><td>Apilado Marasigan</td><td>Leny Joy</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="ferdinand aranas" data-desig="cwp"><td>Aranas</td><td>Ferdinand</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="cecilia arevalo" data-desig="crpp"><td>Arevalo</td><td>Cecilia</td><td><span class="desig-badge desig-badge--crpp">CRPP</span></td></tr>
+<tr class="alumni-row" data-name="dolores arguelles" data-desig="cwp"><td>Arguelles</td><td>Dolores</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="marilou arquero" data-desig="cwp"><td>Arquero</td><td>Marilou</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="nenette aseniero" data-desig="awp"><td>Aseniero</td><td>Nenette</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="sotero atienza" data-desig="cwp"><td>Atienza</td><td>Sotero</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="merald ayson" data-desig="cwp"><td>Ayson</td><td>Merald</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="rholin grace bachar" data-desig="awp"><td>Bachar</td><td>Rholin Grace</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="anthony badilla" data-desig="cwp"><td>Badilla</td><td>Anthony</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ayesa baguidudol" data-desig="cwp"><td>Baguidudol</td><td>Ayesa</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="aimeelyn balanial" data-desig="cwp"><td>Balanial</td><td>Aimeelyn</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="dave joseph balatbat" data-desig="cwp"><td>Balatbat</td><td>Dave Joseph</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ramses joselito balatbat" data-desig="cwp"><td>Balatbat</td><td>Ramses Joselito</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="anjanette balgos" data-desig="cwp"><td>Balgos</td><td>Anjanette</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="arlene balingbing" data-desig="cwp"><td>Balingbing</td><td>Arlene</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="josie marie anne baluyut" data-desig="awp"><td>Baluyut</td><td>Josie Marie Anne</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="jess bandol" data-desig="cwp"><td>Bandol</td><td>Jess</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="aloysius royce banzuela" data-desig="cwp"><td>Banzuela</td><td>Aloysius Royce</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="karen joy barba" data-desig=""><td>Barba</td><td>Karen Joy</td><td><span style="color:var(--muted);font-size:12px;">—</span></td></tr>
+<tr class="alumni-row" data-name="ledielyn barbon" data-desig="cwp"><td>Barbon</td><td>Ledielyn</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="rona joan bartolini" data-desig="cepp"><td>Bartolini</td><td>Rona Joan</td><td><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="willie basilio" data-desig="cwp"><td>Basilio</td><td>Willie</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="nerlette bautista" data-desig=""><td>Bautista</td><td>Nerlette</td><td><span style="color:var(--muted);font-size:12px;">—</span></td></tr>
+<tr class="alumni-row" data-name="ann jillian bautista" data-desig="awp"><td>Bautista</td><td>Ann Jillian</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="florbeth bautista-mendioro" data-desig="cwp"><td>Bautista-Mendioro</td><td>Florbeth</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="gerlie bejosano" data-desig="cwp"><td>Bejosano</td><td>Gerlie</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="leslie karen belen" data-desig="cwp"><td>Belen</td><td>Leslie Karen</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ysabel victoria benitez" data-desig="cwp"><td>Benitez</td><td>Ysabel Victoria</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="rodelio bernardino" data-desig="awp"><td>Bernardino</td><td>Rodelio</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="lilia besid" data-desig="cwp"><td>Besid</td><td>Lilia</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ritz queeny biglaen" data-desig="awp"><td>Biglaen</td><td>Ritz Queeny</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="june jus book" data-desig="cwp"><td>Book</td><td>June Jus</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="rocelia borillo" data-desig="cwp"><td>Borillo</td><td>Rocelia</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="janica charelle borja" data-desig="awp"><td>Borja</td><td>Janica Charelle</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="kristian peace braquis" data-desig="awp"><td>Braquis</td><td>Kristian Peace</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="ann krestel brila" data-desig="awp"><td>Brila</td><td>Ann Krestel</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="myra brucelo" data-desig="cwp"><td>Brucelo</td><td>Myra</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="loida buco" data-desig="cwp"><td>Buco</td><td>Loida</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="sheila buenviaje" data-desig="cepp"><td>Buenviaje</td><td>Sheila</td><td><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="liza bustamante" data-desig="awp"><td>Bustamante</td><td>Liza</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="katrina bustamante" data-desig="cwp"><td>Bustamante</td><td>Katrina</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="maritess buted" data-desig="cwp"><td>Buted</td><td>Maritess</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="danielle caangay" data-desig="crpp,cepp"><td>Caangay</td><td>Danielle</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="ma. alodia cabael-benlayo" data-desig="cwp"><td>Cabael-Benlayo</td><td>Ma. Alodia</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="dayah caballero" data-desig="awp"><td>Caballero</td><td>Dayah</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="marvin cabatana" data-desig="cwp"><td>Cabatana</td><td>Marvin</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="mildred canaya" data-desig="cwp"><td>Canaya</td><td>Mildred</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="baby jean capangpangan" data-desig="cwp"><td>Capangpangan</td><td>Baby Jean</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="margarita louise cargo" data-desig="cwp"><td>Cargo</td><td>Margarita Louise</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="micah jane carodan" data-desig="cwp"><td>Carodan</td><td>Micah Jane</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="shiella carpio" data-desig="awp"><td>Carpio</td><td>Shiella</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="emmanuelle carranza" data-desig="cwp"><td>Carranza</td><td>Emmanuelle</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="rodelio casangkapan" data-desig="cwp"><td>Casangkapan</td><td>Rodelio</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ma. martha angela casimiro" data-desig="awp"><td>Casimiro</td><td>Ma. Martha Angela</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="connie castillo" data-desig="cwp"><td>Castillo</td><td>Connie</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="don silver casumpang" data-desig="awp"><td>Casumpang</td><td>Don Silver</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="mark casupanan" data-desig="awp"><td>Casupanan</td><td>Mark</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="maricris catanyag" data-desig="cwp"><td>Catanyag</td><td>Maricris</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="winnie chan" data-desig="cwp"><td>Chan</td><td>Winnie</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="jenelyn chan" data-desig="cepp"><td>Chan</td><td>Jenelyn</td><td><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="danielle cielo chiang" data-desig="cwp"><td>Chiang</td><td>Danielle Cielo</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="april rose chua" data-desig="crpp,cepp"><td>Chua</td><td>April Rose</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="benny chua" data-desig="cwp"><td>Chua</td><td>Benny</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="robert chua" data-desig="cwp"><td>Chua</td><td>Robert</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="rosa chua" data-desig="cwp"><td>Chua</td><td>Rosa</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="leriza coleman" data-desig="cwp"><td>Coleman</td><td>Leriza</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ellen grace cortez" data-desig=""><td>Cortez</td><td>Ellen Grace</td><td><span style="color:var(--muted);font-size:12px;">—</span></td></tr>
+<tr class="alumni-row" data-name="gladys costales" data-desig="awp"><td>Costales</td><td>Gladys</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="martin cruz" data-desig=""><td>Cruz</td><td>Martin</td><td><span style="color:var(--muted);font-size:12px;">—</span></td></tr>
+<tr class="alumni-row" data-name="maria grachell cruz" data-desig="cwp"><td>Cruz</td><td>Maria Grachell</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="claire ann cuaresma" data-desig="cwp"><td>Cuaresma</td><td>Claire Ann</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="glazy ann cuisia" data-desig="awp"><td>Cuisia</td><td>Glazy Ann</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="gabino cunada" data-desig=""><td>Cunada</td><td>Gabino</td><td><span style="color:var(--muted);font-size:12px;">—</span></td></tr>
+<tr class="alumni-row" data-name="glorycel daileg" data-desig="cepp"><td>Daileg</td><td>Glorycel</td><td><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="jennifer dalire" data-desig="awp"><td>Dalire</td><td>Jennifer</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="cynthia david" data-desig="crpp,cepp"><td>David</td><td>Cynthia</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="raymart david" data-desig="cwp"><td>David</td><td>Raymart</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ye eun marick dawi" data-desig="cwp"><td>Dawi</td><td>Ye Eun Marick</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="rochelle dayanghirang" data-desig=""><td>Dayanghirang</td><td>Rochelle</td><td><span style="color:var(--muted);font-size:12px;">—</span></td></tr>
+<tr class="alumni-row" data-name="cherri ann de castro" data-desig="awp"><td>De Castro</td><td>Cherri Ann</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="john carlo de galicia" data-desig="cwp"><td>De Galicia</td><td>John Carlo</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="michelle de guia" data-desig="cwp"><td>De Guia</td><td>Michelle</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="theresa andrea de guzman" data-desig="crpp,cepp"><td>De Guzman</td><td>Theresa Andrea</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="erlinda de guzman" data-desig="cwp"><td>De Guzman</td><td>Erlinda</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="shirley de guzman" data-desig="awp"><td>De Guzman</td><td>Shirley</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="maria cecilia de leon" data-desig="cwp"><td>De Leon</td><td>Maria Cecilia</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="sarrah de leon" data-desig="cwp"><td>De Leon</td><td>Sarrah</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="marvin de luna" data-desig="cwp"><td>De Luna</td><td>Marvin</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="gemma de san jose" data-desig="awp"><td>De San Jose</td><td>Gemma</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="shyne deliso" data-desig="cwp"><td>Deliso</td><td>Shyne</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="teodora carmela demonteverde" data-desig="awp"><td>Demonteverde</td><td>Teodora Carmela</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="aimee dimaapi" data-desig="cwp"><td>Dimaapi</td><td>Aimee</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="cielo.maria dizon" data-desig="cwp"><td>Dizon</td><td>Cielo.Maria</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="agnes dizon-cuaso" data-desig="cwp"><td>Dizon-Cuaso</td><td>Agnes</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="rochelle dolor" data-desig="cwp"><td>Dolor</td><td>Rochelle</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="david samuel doringo" data-desig="awp"><td>Doringo</td><td>David Samuel</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="mary joyce dugenia" data-desig="cwp"><td>Dugenia</td><td>Mary Joyce</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="emergin durana" data-desig="awp"><td>Durana</td><td>Emergin</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="karina jing dy" data-desig="cwp"><td>Dy</td><td>Karina Jing</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ralph benedict enario" data-desig="crpp,cepp"><td>Enario</td><td>Ralph Benedict</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="edwin escanillas" data-desig="cwp"><td>Escanillas</td><td>Edwin</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="maricel escobedo" data-desig="awp"><td>Escobedo</td><td>Maricel</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="annabelle esmundo" data-desig="cwp"><td>Esmundo</td><td>Annabelle</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="maria kathrina eugenio" data-desig="awp"><td>Eugenio</td><td>Maria Kathrina</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="maria liza evangelista" data-desig="cwp"><td>Evangelista</td><td>Maria Liza</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="jeneveve eira fajardo" data-desig="cwp"><td>Fajardo</td><td>Jeneveve Eira</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="miguel angelo faraon" data-desig="cwp"><td>Faraon</td><td>Miguel Angelo</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="shirleen fedillaga" data-desig="cwp"><td>Fedillaga</td><td>Shirleen</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="carlos leandro felipe" data-desig="cwp"><td>Felipe</td><td>Carlos Leandro</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ginaline ferino" data-desig="cwp"><td>Ferino</td><td>Ginaline</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="beverly fernandez" data-desig="cwp"><td>Fernandez</td><td>Beverly</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="johanna fernandez" data-desig="cwp"><td>Fernandez</td><td>Johanna</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="roger fernandez" data-desig="cwp"><td>Fernandez</td><td>Roger</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="sofia adriana ferreras" data-desig="cwp"><td>Ferreras</td><td>Sofia Adriana</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="princess flor" data-desig="crpp,cepp"><td>Flor</td><td>Princess</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="charlie florentino" data-desig="cwp"><td>Florentino</td><td>Charlie</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="angela flores" data-desig="cwp"><td>Flores</td><td>Angela</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="jeleny floresca" data-desig="cwp"><td>Floresca</td><td>Jeleny</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="maria shiela forte-chan" data-desig="crpp,cepp"><td>Forte-Chan</td><td>Maria Shiela</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="perzeus francia" data-desig="crpp,cepp"><td>Francia</td><td>Perzeus</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="elizabeth fronda" data-desig="cepp"><td>Fronda</td><td>Elizabeth</td><td><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="airen gabito" data-desig="cwp"><td>Gabito</td><td>Airen</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="rocheflume gabor" data-desig=""><td>Gabor</td><td>Rocheflume</td><td><span style="color:var(--muted);font-size:12px;">—</span></td></tr>
+<tr class="alumni-row" data-name="claudette gabriel" data-desig="cwp"><td>Gabriel</td><td>Claudette</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="james paul gaddi" data-desig="cwp"><td>Gaddi</td><td>James Paul</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="giordan alro galache" data-desig="cwp"><td>Galache</td><td>Giordan Alro</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ma rosario gertrudes gamuac" data-desig="crpp,cepp"><td>Gamuac</td><td>Ma Rosario Gertrudes</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="maria kristina garcia" data-desig="crpp,cepp"><td>Garcia</td><td>Maria Kristina</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="dionisio josel garcia" data-desig="cwp"><td>Garcia</td><td>Dionisio Josel</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="mary ann garcia" data-desig="cwp"><td>Garcia</td><td>Mary Ann</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="elpidia garrovillas" data-desig="cwp"><td>Garrovillas</td><td>Elpidia</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ma. goldiluck gaspay" data-desig="awp"><td>Gaspay</td><td>Ma. Goldiluck</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="emely gatchalian" data-desig="awp"><td>Gatchalian</td><td>Emely</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="rita adora gaw" data-desig="cwp"><td>Gaw</td><td>Rita Adora</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="janice go" data-desig="cwp"><td>Go</td><td>Janice</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="sherwin godinez" data-desig="crpp"><td>Godinez</td><td>Sherwin</td><td><span class="desig-badge desig-badge--crpp">CRPP</span></td></tr>
+<tr class="alumni-row" data-name="michael angelo gonzales" data-desig="crpp,cepp"><td>Gonzales</td><td>Michael Angelo</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="claire bernadette gonzales" data-desig="cwp"><td>Gonzales</td><td>Claire Bernadette</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ellen mae gonzales" data-desig="awp"><td>Gonzales</td><td>Ellen Mae</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="philip gregor grande" data-desig="cwp"><td>Grande</td><td>Philip Gregor</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="joseph martin guballa" data-desig="cwp"><td>Guballa</td><td>Joseph Martin</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="gemie gueco" data-desig="cwp"><td>Gueco</td><td>Gemie</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="andrea amor gugulan" data-desig="cwp"><td>Gugulan</td><td>Andrea Amor</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="samira herrera" data-desig="cwp"><td>Herrera</td><td>Samira</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="elma ilagan" data-desig="cwp"><td>Ilagan</td><td>Elma</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="stacy ingatan" data-desig="awp"><td>Ingatan</td><td>Stacy</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="imee januario" data-desig="cwp"><td>Januario</td><td>Imee</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="akeena jasmin" data-desig="cwp"><td>Jasmin</td><td>Akeena</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="raquel javillana" data-desig="cwp"><td>Javillana</td><td>Raquel</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="angelica juan" data-desig="cwp"><td>Juan</td><td>Angelica</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="cynthia junatas" data-desig="cwp"><td>Junatas</td><td>Cynthia</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="julieta katalbas" data-desig="awp"><td>Katalbas</td><td>Julieta</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="annabelle lagamayo" data-desig="cwp"><td>Lagamayo</td><td>Annabelle</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="jasper laguitao" data-desig="crpp"><td>Laguitao</td><td>Jasper</td><td><span class="desig-badge desig-badge--crpp">CRPP</span></td></tr>
+<tr class="alumni-row" data-name="rosilyn lagula" data-desig="cwp"><td>Lagula</td><td>Rosilyn</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="caryl landicho" data-desig="cwp"><td>Landicho</td><td>Caryl</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="zeny laniog" data-desig="cwp"><td>Laniog</td><td>Zeny</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="myrell laude" data-desig="cwp"><td>Laude</td><td>Myrell</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="karen lee" data-desig="cwp"><td>Lee</td><td>Karen</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="susan lee" data-desig="cwp"><td>Lee</td><td>Susan</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="janet lee" data-desig="cwp"><td>Lee</td><td>Janet</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="janette lee" data-desig="cwp"><td>Lee</td><td>Janette</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="reena leechiu-chua" data-desig="cwp"><td>Leechiu-Chua</td><td>Reena</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="kristine leechiu-tan" data-desig="cwp"><td>Leechiu-Tan</td><td>Kristine</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="charluvin legaspi" data-desig="awp"><td>Legaspi</td><td>Charluvin</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="albert ramir libre" data-desig="cwp"><td>Libre</td><td>Albert Ramir</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ching ching lim" data-desig="cwp"><td>Lim</td><td>Ching Ching</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ronald jr lim" data-desig="cwp"><td>Lim</td><td>Ronald Jr</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="sharleen hazel lim" data-desig="cwp"><td>Lim</td><td>Sharleen Hazel</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="darrell christian limbaroc" data-desig="cwp"><td>Limbaroc</td><td>Darrell Christian</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="shirley lomoon" data-desig="cwp"><td>Lomoon</td><td>Shirley</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="johanna lonzon" data-desig="cwp"><td>Lonzon</td><td>Johanna</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="farrah lopez" data-desig="cwp"><td>Lopez</td><td>Farrah</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="shiela may lopez" data-desig="awp"><td>Lopez</td><td>Shiela May</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="may flor lopez" data-desig="cwp"><td>Lopez</td><td>May Flor</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="carlo lozano" data-desig="awp"><td>Lozano</td><td>Carlo</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="edna lu" data-desig="cepp"><td>Lu</td><td>Edna</td><td><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="arlene lugatiman" data-desig="cwp"><td>Lugatiman</td><td>Arlene</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="jeremy lumanog" data-desig="cwp"><td>Lumanog</td><td>Jeremy</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="armi luz" data-desig="cwp"><td>Luz</td><td>Armi</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="robert luz" data-desig="cwp"><td>Luz</td><td>Robert</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="joanne zharina macatangay" data-desig="cwp"><td>Macatangay</td><td>Joanne Zharina</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="gina r. maclang" data-desig="cwp"><td>Maclang</td><td>Gina R.</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="maria lourdes madrigal" data-desig="awp"><td>Madrigal</td><td>Maria Lourdes</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="laarni magsombol" data-desig="cwp"><td>Magsombol</td><td>Laarni</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="alvin glenn malicsi" data-desig="cwp"><td>Malicsi</td><td>Alvin Glenn</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="elmer mallari" data-desig="cwp"><td>Mallari</td><td>Elmer</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="mary ann manalo" data-desig="cwp"><td>Manalo</td><td>Mary Ann</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="jenalyn manaog" data-desig="crpp,cepp"><td>Manaog</td><td>Jenalyn</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="sheena marie mangapit" data-desig="cwp"><td>Mangapit</td><td>Sheena Marie</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="madelyn manglicmot" data-desig="cwp"><td>Manglicmot</td><td>Madelyn</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="leonarlyn mangubat" data-desig="awp"><td>Mangubat</td><td>Leonarlyn</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="jean-pearl manuel" data-desig="cwp"><td>Manuel</td><td>Jean-Pearl</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="jacob garett maralit" data-desig=""><td>Maralit</td><td>Jacob Garett</td><td><span style="color:var(--muted);font-size:12px;">—</span></td></tr>
+<tr class="alumni-row" data-name="carolina mariazeta" data-desig="cwp"><td>Mariazeta</td><td>Carolina</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="teresita mariposa" data-desig="crpp,cepp"><td>Mariposa</td><td>Teresita</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="madhel marquez" data-desig="cwp"><td>Marquez</td><td>Madhel</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="hancel marquez-tesara" data-desig="awp"><td>Marquez-Tesara</td><td>Hancel</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="cherielyn marra" data-desig="cwp"><td>Marra</td><td>Cherielyn</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="marie audrey martinez-amador" data-desig="cwp"><td>Martinez-Amador</td><td>Marie Audrey</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="rishel mañas" data-desig="cwp"><td>Mañas</td><td>Rishel</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="nereo mella" data-desig="cwp"><td>Mella</td><td>Nereo</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="lujim alden mendoza" data-desig="cwp"><td>Mendoza</td><td>Lujim Alden</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="melrose ivy mendoza" data-desig="cwp"><td>Mendoza</td><td>Melrose Ivy</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="j marie mendoza" data-desig="cwp"><td>Mendoza</td><td>J Marie</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="alvin joseph meneses" data-desig="cwp"><td>Meneses</td><td>Alvin Joseph</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ramon gerard mercado" data-desig="crpp,cepp"><td>Mercado</td><td>Ramon Gerard</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="mcanthony mercado" data-desig="cwp"><td>Mercado</td><td>Mcanthony</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="sheena merdegia" data-desig="crpp,cepp"><td>Merdegia</td><td>Sheena</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="angelique marie p mijares" data-desig="cwp"><td>Mijares</td><td>Angelique Marie P</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="joshua genesis miralles" data-desig="cepp"><td>Miralles</td><td>Joshua Genesis</td><td><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="joanne jessica miralles" data-desig="cwp"><td>Miralles</td><td>Joanne Jessica</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="mary joyce miranda" data-desig="cwp"><td>Miranda</td><td>Mary Joyce</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="valerie ann moises" data-desig="cwp"><td>Moises</td><td>Valerie Ann</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ma. clara milagrosa montealto" data-desig="crpp"><td>Montealto</td><td>Ma. Clara Milagrosa</td><td><span class="desig-badge desig-badge--crpp">CRPP</span></td></tr>
+<tr class="alumni-row" data-name="catherine montefalcon" data-desig="cwp"><td>Montefalcon</td><td>Catherine</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="susannah morales" data-desig="cwp"><td>Morales</td><td>Susannah</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ephraim mosquera" data-desig="cwp"><td>Mosquera</td><td>Ephraim</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="bambi marie nabat" data-desig="cwp"><td>Nabat</td><td>Bambi Marie</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="sheryllyne nacario" data-desig="cwp"><td>Nacario</td><td>Sheryllyne</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="maria theresa nasa-an" data-desig="crpp,cepp"><td>Nasa-An</td><td>Maria Theresa</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="evelyn ng" data-desig="cwp"><td>Ng</td><td>Evelyn</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="janet ng" data-desig="cwp"><td>Ng</td><td>Janet</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ronalyn nicanor" data-desig="cwp"><td>Nicanor</td><td>Ronalyn</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ernielyn nieva" data-desig="cwp"><td>Nieva</td><td>Ernielyn</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ella grace nuguid" data-desig="cwp"><td>Nuguid</td><td>Ella Grace</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="nica nuqui" data-desig="cwp"><td>Nuqui</td><td>Nica</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="meg orvelle obina" data-desig="cwp"><td>Obina</td><td>Meg Orvelle</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="genelin olila" data-desig="cwp"><td>Olila</td><td>Genelin</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ruth olivares" data-desig="cwp"><td>Olivares</td><td>Ruth</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="engel palermo" data-desig="crpp,cepp"><td>Palermo</td><td>Engel</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="joselito palma" data-desig="crpp,cepp"><td>Palma</td><td>Joselito</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="jingle veronica pamerol" data-desig="cwp"><td>Pamerol</td><td>Jingle Veronica</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="elaine pangan" data-desig="cwp"><td>Pangan</td><td>Elaine</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="angela lilia panganiban" data-desig="cwp"><td>Panganiban</td><td>Angela Lilia</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="teresa joy panganiban" data-desig="cwp"><td>Panganiban</td><td>Teresa Joy</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="maria rosalinda panuncialman" data-desig="cwp"><td>Panuncialman</td><td>Maria Rosalinda</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="emmanuel paras" data-desig="cwp"><td>Paras</td><td>Emmanuel</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="lyndon klaus rossini pataunia" data-desig="cwp"><td>Pataunia</td><td>Lyndon Klaus Rossini</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="kevin charles patco" data-desig="cwp"><td>Patco</td><td>Kevin Charles</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="raquel patris" data-desig="cwp"><td>Patris</td><td>Raquel</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ella mae paule" data-desig="crpp"><td>Paule</td><td>Ella Mae</td><td><span class="desig-badge desig-badge--crpp">CRPP</span></td></tr>
+<tr class="alumni-row" data-name="maria celina pelayo" data-desig="cwp"><td>Pelayo</td><td>Maria Celina</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="monaliza perez" data-desig="cwp"><td>Perez</td><td>Monaliza</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="miladay pilar" data-desig="awp"><td>Pilar</td><td>Miladay</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="martin pizarro" data-desig="cwp"><td>Pizarro</td><td>Martin</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="lailanie potenciano" data-desig="crpp,cepp"><td>Potenciano</td><td>Lailanie</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="amelia pua" data-desig="cwp"><td>Pua</td><td>Amelia</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="jeffrey lloyd quinto" data-desig="awp"><td>Quinto</td><td>Jeffrey Lloyd</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="reyna rabe" data-desig="cwp"><td>Rabe</td><td>Reyna</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="maria nieva racimo" data-desig="cwp"><td>Racimo</td><td>Maria Nieva</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="sherwin rambuyon" data-desig="cwp"><td>Rambuyon</td><td>Sherwin</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="melissa ramirez" data-desig="cwp"><td>Ramirez</td><td>Melissa</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ariane rayo" data-desig="cwp"><td>Rayo</td><td>Ariane</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="jomar rebusit" data-desig="cwp"><td>Rebusit</td><td>Jomar</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="mariamir renia" data-desig="crpp,cepp"><td>Renia</td><td>Mariamir</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="maria lourdes repaso" data-desig="cwp"><td>Repaso</td><td>Maria Lourdes</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="jose karlo reyes" data-desig="cwp"><td>Reyes</td><td>Jose Karlo</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="maria kristina camille reyes" data-desig="cwp"><td>Reyes</td><td>Maria Kristina Camille</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ray justin reyes" data-desig="cwp"><td>Reyes</td><td>Ray Justin</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="darnell rico" data-desig="cwp"><td>Rico</td><td>Darnell</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="cyrelle ann ridad" data-desig="cwp"><td>Ridad</td><td>Cyrelle Ann</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="mary grace charmelle rivera" data-desig="crpp,cepp"><td>Rivera</td><td>Mary Grace Charmelle</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="jasper robles" data-desig="awp"><td>Robles</td><td>Jasper</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="marilou romero" data-desig="cwp"><td>Romero</td><td>Marilou</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="suzzette romero" data-desig="awp"><td>Romero</td><td>Suzzette</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="melissa romualdez" data-desig="cwp"><td>Romualdez</td><td>Melissa</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="maria cecilia rosales" data-desig="cwp"><td>Rosales</td><td>Maria Cecilia</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="audrey eve rufino" data-desig="crpp,cepp"><td>Rufino</td><td>Audrey Eve</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="janelle rullan" data-desig="awp"><td>Rullan</td><td>Janelle</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="barbara mirrian sujide" data-desig="cwp"><td>SUJIDE</td><td>BARBARA MIRRIAN</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="raymund sagum" data-desig="crpp,cepp"><td>Sagum</td><td>Raymund</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="remilla salido-evangelista" data-desig="cwp"><td>Salido-Evangelista</td><td>Remilla</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="chelsea deigh salonga" data-desig="crpp"><td>Salonga</td><td>Chelsea Deigh</td><td><span class="desig-badge desig-badge--crpp">CRPP</span></td></tr>
+<tr class="alumni-row" data-name="maria teresa salvador" data-desig="cwp"><td>Salvador</td><td>Maria Teresa</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="jonathan roy san juan" data-desig="awp"><td>San Juan</td><td>Jonathan Roy</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="ma. elizabeth sanchez" data-desig="cwp"><td>Sanchez</td><td>Ma. Elizabeth</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="dan angelo sandiko" data-desig="cwp"><td>Sandiko</td><td>Dan Angelo</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="sheila santos" data-desig="awp"><td>Santos</td><td>Sheila</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="joanna mae sapinoso" data-desig="crpp,cepp"><td>Sapinoso</td><td>Joanna Mae</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="loyne sardon" data-desig="cwp"><td>Sardon</td><td>Loyne</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="diana sarol" data-desig="awp"><td>Sarol</td><td>Diana</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="john christian senado" data-desig="cwp"><td>Senado</td><td>John Christian</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="elizabeth sigaya" data-desig="cwp"><td>Sigaya</td><td>Elizabeth</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="mae suzzette sobejana" data-desig="cwp"><td>Sobejana</td><td>Mae Suzzette</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="jayson solomon" data-desig="cwp"><td>Solomon</td><td>Jayson</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="evangeline sombiluna" data-desig="cwp"><td>Sombiluna</td><td>Evangeline</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="aiza soriano" data-desig="crpp,cepp"><td>Soriano</td><td>Aiza</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="ana brenda soriano" data-desig="cwp"><td>Soriano</td><td>Ana Brenda</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="reymond sta. ana" data-desig="cwp"><td>Sta. Ana</td><td>Reymond</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="odessa sunega" data-desig="cwp"><td>Sunega</td><td>Odessa</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="stephen sungkip" data-desig="cwp"><td>Sungkip</td><td>Stephen</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="chadwick co sy su" data-desig="cwp"><td>Sy Su</td><td>Chadwick Co</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="jocyl mae tabujara" data-desig="cwp"><td>Tabujara</td><td>Jocyl Mae</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="peachy taculod" data-desig="cwp"><td>Taculod</td><td>Peachy</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="daryll tagulao" data-desig="crpp,cepp"><td>Tagulao</td><td>Daryll</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="regina tambobong" data-desig="cwp"><td>Tambobong</td><td>Regina</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="teena valerie tan" data-desig="crpp,cepp"><td>Tan</td><td>Teena Valerie</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="cristina tan" data-desig="awp"><td>Tan</td><td>Cristina</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="enoch tan" data-desig="cwp"><td>Tan</td><td>Enoch</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="marilou tan" data-desig="cwp"><td>Tan</td><td>Marilou</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="sheryl tan" data-desig="awp"><td>Tan</td><td>Sheryl</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="shirley tan" data-desig="awp"><td>Tan</td><td>Shirley</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="sonny tan" data-desig="cwp"><td>Tan</td><td>Sonny</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="jennifer tan-juantong" data-desig="cwp"><td>Tan-Juantong</td><td>Jennifer</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="jimmy tanjutco" data-desig="cwp"><td>Tanjutco</td><td>Jimmy</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="lynley tanjutco" data-desig="cwp"><td>Tanjutco</td><td>Lynley</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="faye rose tayag" data-desig="cwp"><td>Tayag</td><td>Faye Rose</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="laurence tengkiat" data-desig="awp"><td>Tengkiat</td><td>Laurence</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="shirlyn ann tin" data-desig="cwp"><td>Tin</td><td>Shirlyn Ann</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="celeste dalhalie tin-ga" data-desig="crpp,cepp"><td>Tin-Ga</td><td>Celeste Dalhalie</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="luzviminda ting" data-desig="cwp"><td>Ting</td><td>Luzviminda</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="emmanuel toledo" data-desig="cwp"><td>Toledo</td><td>Emmanuel</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="jacob tolentino" data-desig="cwp"><td>Tolentino</td><td>Jacob</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="mark tong" data-desig="cwp"><td>Tong</td><td>Mark</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="arianne hyden tonio" data-desig="awp"><td>Tonio</td><td>Arianne Hyden</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="kerwin torregrosa" data-desig="awp"><td>Torregrosa</td><td>Kerwin</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="maria cristina torres" data-desig="awp"><td>Torres</td><td>Maria Cristina</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="lyn-lyn tubon" data-desig="cwp"><td>Tubon</td><td>Lyn-Lyn</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="alfe tulagan" data-desig="cwp"><td>Tulagan</td><td>Alfe</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="melody utanes" data-desig="cwp"><td>Utanes</td><td>Melody</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="janett valasote" data-desig="cwp"><td>Valasote</td><td>Janett</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="ramon valdestamon" data-desig="crpp,cepp"><td>Valdestamon</td><td>Ramon</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="mary kathryn joy vargas" data-desig="crpp,cepp"><td>Vargas</td><td>Mary Kathryn Joy</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="zulita vasallo" data-desig="awp"><td>Vasallo</td><td>Zulita</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="josie verano" data-desig="crpp,cepp"><td>Verano</td><td>Josie</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="guadalope vicaldo" data-desig="crpp,cepp"><td>Vicaldo</td><td>Guadalope</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="ma. abigail villacorta" data-desig="cwp"><td>Villacorta</td><td>Ma. Abigail</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="adelina villacorte" data-desig="awp"><td>Villacorte</td><td>Adelina</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="adrian villaflor" data-desig="cwp"><td>Villaflor</td><td>Adrian</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="maria theresa villamater" data-desig="crpp,cepp"><td>Villamater</td><td>Maria Theresa</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="johnston villanueva" data-desig="cwp"><td>Villanueva</td><td>Johnston</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="luzviminda viray" data-desig="cwp"><td>Viray</td><td>Luzviminda</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="marina vitasa" data-desig="crpp,cepp"><td>Vitasa</td><td>Marina</td><td><span class="desig-badge desig-badge--crpp">CRPP</span><span class="desig-badge desig-badge--cepp">CEPP</span></td></tr>
+<tr class="alumni-row" data-name="aurora yao" data-desig="awp"><td>Yao</td><td>Aurora</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="sherlynn young" data-desig="awp"><td>Young</td><td>Sherlynn</td><td><span class="desig-badge desig-badge--awp">AWP</span></td></tr>
+<tr class="alumni-row" data-name="willison yu" data-desig="cwp"><td>Yu</td><td>Willison</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="sheilla marie zerrudo" data-desig="cwp"><td>Zerrudo</td><td>Sheilla Marie</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="daniel gregorio jr zinampan" data-desig="cwp"><td>Zinampan</td><td>Daniel Gregorio Jr</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="dawn avigail zoleta" data-desig="cwp"><td>Zoleta</td><td>Dawn Avigail</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="meliza zulueta" data-desig="cwp"><td>Zulueta</td><td>Meliza</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="mary ann zuñiga" data-desig="cwp"><td>Zuñiga</td><td>Mary Ann</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+<tr class="alumni-row" data-name="estrella de la torre" data-desig="cwp"><td>de la Torre</td><td>Estrella</td><td><span class="desig-badge desig-badge--cwp">CWP</span></td></tr>
+</tbody>
+      </table>
+      <div style="text-align:center; margin-top:56px;">
+        <a href="alumni.html" class="btn btn--primary">Read Alumni Testimonials &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+<footer class="footer">
+  <div class="footer__main"><div class="container">
+    <div style="max-width:380px;">
+      <img src="https://wmc.org.ph/wp-content/uploads/2022/10/WMC_logohorizontal_blue-1-194x75.png" alt="WMC" class="footer__logo" style="filter:brightness(0) invert(1);">
+      <p class="footer__desc" style="margin-top:16px;">Unit 508 Cityland 10 Condominium Tower 2,<br>H.V. Dela Costa St., Makati City, Philippines</p>
+      <p class="footer__desc" style="margin-top:8px;">admin@wmc.org.ph &middot; (+63) 969-284-2011</p>
+    </div>
+  </div></div>
+  <div class="footer__bottom"><div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+    <p class="footer__copy">&copy; 2026 Wealth Management Center for Communications and Research, Inc. All rights reserved.</p>
+    <div class="footer__social">
+      <a href="https://www.facebook.com/WealthCenterOrg" target="_blank" class="social-link">f</a>
+      <a href="https://instagram.com/wealthcenterorg" target="_blank" class="social-link">ig</a>
+      <a href="https://www.linkedin.com/company/wealthcenterorg/" target="_blank" class="social-link">in</a>
+      <a href="http://t.me/wealthmanagementcenter" target="_blank" class="social-link">tg</a>
+    </div>
+  </div></div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
