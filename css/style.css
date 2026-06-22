@@ -511,3 +511,350 @@ ul { list-style: none; }
     height: 300px !important;
   }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   COMPREHENSIVE RESPONSIVE SYSTEM — ALL PAGES
+   Breakpoints: 1024px (tablet-lg), 768px (tablet), 480px (mobile)
+   Rule: override inline styles with !important where needed
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── 1. HOMEPAGE HERO (inline flex split layout) ─────────────
+   The hero uses inline style="display:flex" with two children
+   at flex:0 0 58% and flex:0 0 42%. Must override with !important.
+   ──────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  /* Force the hero section to stack */
+  .page-content > section:first-child {
+    flex-direction: column !important;
+    min-height: auto !important;
+    padding-top: 72px !important;
+  }
+  /* Left text panel — full width */
+  .page-content > section:first-child > div:nth-child(2) {
+    flex: none !important;
+    width: 100% !important;
+    padding: 56px 24px 40px !important;
+  }
+  /* Right photo panel — full width */
+  .page-content > section:first-child > div:nth-child(3) {
+    flex: none !important;
+    width: 100% !important;
+  }
+  /* Hero headline font size */
+  .page-content > section:first-child h1 {
+    font-size: clamp(36px, 9vw, 56px) !important;
+  }
+  /* Buttons stack */
+  .page-content > section:first-child > div:nth-child(2) > div[style*="display:flex"] {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .page-content > section:first-child a.btn {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 320px !important;
+  }
+  /* Photo frame — hide the overhanging gold bottom div */
+  .page-content > section:first-child > div:nth-child(3) > div:last-child[style*="height:48px"] {
+    display: none !important;
+  }
+  /* Photo itself */
+  .page-content > section:first-child > div:nth-child(3) img {
+    height: 300px !important;
+    object-fit: cover !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-content > section:first-child > div:nth-child(2) {
+    padding: 48px 16px 32px !important;
+  }
+  .page-content > section:first-child h1 {
+    font-size: clamp(30px, 8vw, 42px) !important;
+  }
+  .page-content > section:first-child > div:nth-child(3) img {
+    height: 220px !important;
+  }
+}
+
+/* ── 2. HOMEPAGE — inline grid sections ──────────────────────
+   Sections using inline style="display:grid; grid-template-columns:..."
+   ──────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  /* Why WMC pillars: 3-col → 1-col */
+  [style*="grid-template-columns:repeat(3,1fr)"],
+  [style*="grid-template-columns: repeat(3,1fr)"],
+  [style*="grid-template-columns:repeat(3, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* Course cards in courses page */
+  [style*="grid-template-columns:1fr 380px"],
+  [style*="grid-template-columns: 1fr 380px"],
+  [style*="grid-template-columns:1fr 360px"],
+  [style*="grid-template-columns: 1fr 360px"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* Info sidebar card — full width on mobile */
+  [style*="background:var(--dark-tone)"][style*="border:1px solid rgba(212,175,106"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Two-col grids → single col */
+  [style*="grid-template-columns:1fr 1fr"],
+  [style*="grid-template-columns: 1fr 1fr"],
+  [style*="grid-template-columns:repeat(2,1fr)"],
+  [style*="grid-template-columns: repeat(2,1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* Stats / trust band */
+  .trust-band__item { flex: 0 0 100%; }
+  /* Section padding reduction */
+  [style*="padding:96px 0"],
+  [style*="padding: 96px 0"] {
+    padding: 56px 0 !important;
+  }
+  [style*="padding:72px 0"],
+  [style*="padding: 72px 0"] {
+    padding: 48px 0 !important;
+  }
+}
+
+/* ── 3. CWP PAGE — Course Leaders 3-col grid ─────────────────
+   Faculty cards: 3-col → 1-col on mobile
+   ──────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  /* CWP faculty 3-col grid */
+  #faculty-grid,
+  [style*="grid-template-columns:repeat(3,1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  /* Tablet: 2-col faculty cards */
+  [style*="grid-template-columns:repeat(3,1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* ── 4. CWP / CEPP — Course Outline 3-col → 1-col ───────────*/
+@media (max-width: 768px) {
+  /* Module outline cards */
+  [style*="grid-template-columns:repeat(3,1fr)"][style*="gap:20px"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* Methodology 3-col */
+  [style*="grid-template-columns:repeat(3,1fr)"][style*="max-width:900px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── 5. CEPP — Leader card horizontal → vertical ─────────────*/
+@media (max-width: 768px) {
+  [style*="grid-template-columns:280px 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+  [style*="grid-template-columns: 280px 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── 6. ITEMS PAGE — Faculty 3-col grid ──────────────────────*/
+@media (max-width: 768px) {
+  [style*="grid-template-columns:repeat(3,1fr)"][style*="gap:16px"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 480px) {
+  [style*="grid-template-columns:repeat(3,1fr)"][style*="gap:16px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── 7. COURSES PAGE — card grids ────────────────────────────*/
+@media (max-width: 768px) {
+  /* Standalone modules 3-col → 1-col */
+  [style*="grid-template-columns:repeat(3,1fr)"][style*="gap:24px"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* CWP flagship card — hide image on small screens */
+  [style*="grid-template-columns:1fr 200px"] {
+    grid-template-columns: 1fr !important;
+  }
+  [style*="grid-template-columns:1fr 200px"] > div:last-child {
+    display: none !important;
+  }
+  /* ITEMS horizontal card */
+  [style*="grid-template-columns:1fr auto"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── 8. RESOURCES PAGE — filter + 3-col cards ────────────────*/
+@media (max-width: 768px) {
+  /* Filter buttons wrap */
+  [style*="display:flex"][style*="gap:8px"][style*="flex-wrap:wrap"] {
+    gap: 6px !important;
+  }
+  .filter-btn { font-size: 12px !important; padding: 6px 12px !important; }
+}
+@media (max-width: 600px) {
+  /* Resource cards: 3-col → 1-col */
+  [style*="grid-template-columns:repeat(3,1fr)"][style*="gap:24px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── 9. ALUMNI PAGE — testimonial grid ───────────────────────*/
+@media (max-width: 600px) {
+  .testimonials__grid { grid-template-columns: 1fr !important; }
+}
+
+/* ── 10. GALLERY PAGE — photo grid ───────────────────────────*/
+@media (max-width: 600px) {
+  .gallery__grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-auto-rows: 140px !important;
+  }
+  .gallery__item--wide { grid-column: span 2 !important; }
+}
+@media (max-width: 380px) {
+  .gallery__grid { grid-template-columns: 1fr !important; }
+}
+
+/* ── 11. HOMEPAGE GALLERY PREVIEW (bottom section) ───────────*/
+@media (max-width: 768px) {
+  /* Gallery preview grid */
+  [style*="grid-auto-rows:200px"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-auto-rows: 140px !important;
+  }
+}
+@media (max-width: 480px) {
+  [style*="grid-auto-rows:200px"] {
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: 180px !important;
+  }
+  /* Gallery section header — stack */
+  [style*="display:flex"][style*="align-items:flex-end"][style*="justify-content:space-between"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
+
+/* ── 12. BOARD PAGE — director cards ─────────────────────────*/
+@media (max-width: 768px) {
+  .board-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ── 13. CONTACT PAGE ────────────────────────────────────────*/
+@media (max-width: 768px) {
+  .contact__grid { grid-template-columns: 1fr !important; }
+}
+
+/* ── 14. PAGE HEROES — font sizes ────────────────────────────*/
+@media (max-width: 768px) {
+  .page-hero { padding: 80px 0 48px !important; }
+  .page-hero__title { font-size: clamp(28px, 7vw, 44px) !important; }
+  .page-hero__sub { font-size: 15px !important; }
+}
+
+/* ── 15. SECTION TITLES ──────────────────────────────────────*/
+@media (max-width: 768px) {
+  .section-title { font-size: clamp(24px, 6vw, 36px) !important; }
+  .section-eyebrow { font-size: 9px !important; }
+}
+
+/* ── 16. CTA BAND ────────────────────────────────────────────*/
+@media (max-width: 768px) {
+  .cta-band { padding: 64px 0 !important; }
+  .cta-band__title { font-size: clamp(24px, 6vw, 40px) !important; }
+  .cta-band__actions { flex-direction: column !important; gap: 12px !important; }
+  .cta-band__actions .btn { width: 100% !important; max-width: 320px !important; justify-content: center !important; }
+}
+
+/* ── 17. FOOTER ──────────────────────────────────────────────*/
+@media (max-width: 768px) {
+  .footer__main .container > div { max-width: 100% !important; text-align: center !important; }
+  .footer__logo { margin: 0 auto !important; }
+  .footer__bottom .container { flex-direction: column !important; align-items: center !important; text-align: center !important; gap: 12px !important; }
+}
+
+/* ── 18. MISSION SECTION (homepage) ──────────────────────────*/
+@media (max-width: 768px) {
+  .mission__grid {
+    grid-template-columns: 1fr !important;
+  }
+  .mission__image-wrap { height: 260px !important; overflow: hidden !important; }
+  .mission__image { height: 100% !important; object-fit: cover !important; }
+}
+
+/* ── 19. TRUST / STATS BAND ──────────────────────────────────*/
+@media (max-width: 480px) {
+  .trust-band__inner { flex-direction: column !important; gap: 24px !important; }
+  .stats-band__grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+/* ── 20. HOMEPAGE COURSE CARDS SECTION ───────────────────────*/
+@media (max-width: 768px) {
+  .courses__grid { grid-template-columns: 1fr !important; }
+  .course-card--featured { flex-direction: column !important; }
+  .course-card__image { height: 220px !important; }
+}
+
+/* ── 21. INLINE FLEX ROWS used in various sections ───────────*/
+@media (max-width: 600px) {
+  /* IIAP recognition band — stack items */
+  [style*="display:flex"][style*="align-items:center"][style*="justify-content:center"][style*="gap:32px"] {
+    flex-direction: column !important;
+    gap: 16px !important;
+    text-align: center !important;
+  }
+  /* Separator divs between items */
+  [style*="width:1px"][style*="height:56px"] {
+    display: none !important;
+  }
+  /* Horizontal info cards */
+  [style*="display:grid"][style*="grid-template-columns:1fr auto"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── 22. GENERAL INLINE PADDING overrides on mobile ──────────*/
+@media (max-width: 480px) {
+  [style*="padding:56px"],
+  [style*="padding: 56px"] {
+    padding: 32px 20px !important;
+  }
+  [style*="padding:48px"],
+  [style*="padding: 48px"] {
+    padding: 28px 16px !important;
+  }
+  [style*="padding:36px"],
+  [style*="padding: 36px"] {
+    padding: 24px 16px !important;
+  }
+  [style*="padding:32px"],
+  [style*="padding: 32px"] {
+    padding: 20px 16px !important;
+  }
+}
+
+/* ── 23. IMAGES — prevent overflow ───────────────────────────*/
+@media (max-width: 768px) {
+  img { max-width: 100% !important; height: auto !important; }
+  /* Exception: fixed-height faculty photos */
+  [style*="height:300px"] > img,
+  [style*="height:280px"] > img,
+  [style*="height:320px"] > img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+/* ── 24. CONTAINER padding on very small screens ─────────────*/
+@media (max-width: 380px) {
+  .container { padding: 0 12px !important; }
+}
