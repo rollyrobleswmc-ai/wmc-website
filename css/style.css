@@ -321,12 +321,15 @@ ul { list-style: none; }
 @media (max-width: 768px) {
   .container { padding: 0 20px; }
   .nav__menu { display: none; }
-  .nav__menu.open { display: flex; flex-direction: column; position: fixed; top: 72px; left: 0; right: 0; bottom: 0; background: var(--navy); padding: 28px; gap: 4px; overflow-y: auto; }
+  .nav__menu.open { display: flex; flex-direction: column; position: fixed; top: 72px; left: 0; right: 0; bottom: 0; background: var(--navy); padding: 28px; gap: 4px; overflow-y: auto; z-index: 999; }
   .nav__link { font-size: 15px; padding: 12px 0; }
   .nav__dropdown { display: none !important; position: static; border: none; background: rgba(255,255,255,0.05); box-shadow: none; padding-left: 16px; }
   .nav__item.open .nav__dropdown { display: block !important; }
   .nav__toggle { display: flex; }
   .pillars__grid { grid-template-columns: 1fr; }
+  /* Hero: stack photo below text on mobile */
+  section[style*="min-height:100vh"] .container > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+  section[style*="min-height:100vh"] .container > div[style*="grid-template-columns"] > div:last-child img { height: 260px !important; object-fit: cover; }
   .stats-band__grid { grid-template-columns: repeat(2,1fr); }
   .testimonials__grid { grid-template-columns: 1fr; }
   .gallery__grid { grid-template-columns: repeat(2,1fr); }
