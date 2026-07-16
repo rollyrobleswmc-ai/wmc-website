@@ -1,36 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* Nav scroll */
+  /* ── Nav scroll ── */
   const nav = document.querySelector('.nav');
   if (nav) window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
 
-  /* Mobile menu — use inline style to bypass CSS !important on display:none */
+  /* ── Mobile menu — inline styles beat CSS !important ── */
   const toggle = document.getElementById('nav-toggle');
   const menu   = document.getElementById('nav-menu');
-  const MOBILE_BP = 1024;
+  const BP     = 1024;
 
-  function isMobile() { return window.innerWidth <= MOBILE_BP; }
+  function isMobile() { return window.innerWidth <= BP; }
 
   function openMenu() {
-    menu.style.cssText = 'display:flex !important; flex-direction:column; position:fixed; top:72px; left:0; right:0; bottom:0; background:#0D1B3E; padding:28px; gap:0; overflow-y:auto; z-index:1001;';
+    menu.style.cssText = 'display:flex; flex-direction:column; position:fixed; top:72px; left:0; right:0; bottom:0; background:#0D1B3E; padding:24px 28px; gap:0; overflow-y:auto; z-index:999;';
     toggle.classList.add('active');
+    document.body.style.overflow = 'hidden';
   }
   function closeMenu() {
     menu.style.cssText = 'display:none;';
     toggle.classList.remove('active');
-    document.querySelectorAll('.nav__item').forEach(i => i.classList.remove('open'));
+    document.body.style.overflow = '';
+    document.querySelectorAll('.nav__item').forEach(i => {
+      i.classList.remove('open');
+      const d = i.querySelector('.nav__dropdown');
+      if (d) d.style.display = '';
+    });
   }
 
   if (toggle && menu) {
-    // Init: hide menu on mobile
     if (isMobile()) menu.style.display = 'none';
 
     toggle.addEventListener('click', () => {
-      const isOpen = menu.style.display === 'none' || menu.style.display === '';
-      if (isOpen) { openMenu(); } else { closeMenu(); }
+      const isHidden = menu.style.display === 'none' || menu.style.display === '';
+      if (isHidden) { openMenu(); } else { closeMenu(); }
     });
 
-    // Dropdown toggle on mobile
+    /* Dropdown toggle on mobile */
     document.querySelectorAll('.nav__item').forEach(item => {
       const link = item.querySelector('.nav__link');
       const drop = item.querySelector('.nav__dropdown');
@@ -53,31 +58,37 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Close menu when a non-dropdown link is tapped
+    /* Close on non-dropdown link tap */
     document.querySelectorAll('.nav__link').forEach(link => {
       if (!link.closest('.nav__item').querySelector('.nav__dropdown')) {
         link.addEventListener('click', () => { if (isMobile()) closeMenu(); });
       }
     });
 
-    // Close menu on resize to desktop
+    /* Reset on resize to desktop */
     window.addEventListener('resize', () => {
       if (!isMobile()) {
         menu.style.cssText = '';
         toggle.classList.remove('active');
+        document.body.style.overflow = '';
       } else {
         if (!toggle.classList.contains('active')) menu.style.display = 'none';
       }
     });
   }
 
-  /* Fade-up */
-  const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.08 });
+  /* ── Fade-up animation ── */
+  const obs = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  }), { threshold: 0.08 });
   document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
 
-  /* Counter animation */
-  const cobs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { animateCounter(e.target); cobs.unobserve(e.target); } }), { threshold: 0.5 });
+  /* ── Counter animation ── */
+  const cobs = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { animateCounter(e.target); cobs.unobserve(e.target); }
+  }), { threshold: 0.5 });
   document.querySelectorAll('.stat__num[data-count]').forEach(el => cobs.observe(el));
+
   function animateCounter(el) {
     const target = parseInt(el.dataset.count);
     const suffix = el.dataset.suffix || '';
@@ -92,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(upd);
   }
 
-  /* Testimonials show more */
+  /* ── Show more testimonials ── */
   const btn = document.getElementById('show-more-testimonials');
   if (btn) {
     btn.addEventListener('click', () => {
@@ -107,22 +118,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* Gallery lightbox */
-  const lb = document.getElementById('lightbox');
+  /* ── Gallery lightbox ── */
+  const lb    = document.getElementById('lightbox');
   const lbImg = document.getElementById('lightbox-img');
   if (lb && lbImg) {
     document.querySelectorAll('.gallery__item img').forEach(img => {
       img.addEventListener('click', () => { lbImg.src = img.src; lb.classList.add('active'); });
     });
-    document.getElementById('lightbox-close').addEventListener('click', () => lb.classList.remove('active'));
+    document.getElementById('lightbox-close')?.addEventListener('click', () => lb.classList.remove('active'));
     lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('active'); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('active'); });
   }
 
-  /* Alumni search + filter */
-  const alumniSearch = document.getElementById('alumni-search');
-  const alumniFilter = document.querySelectorAll('.filter-btn[data-desig]');
-  const alumniRows   = document.querySelectorAll('.alumni-row');
+  /* ── Alumni search + filter ── */
+  const alumniSearch  = document.getElementById('alumni-search');
+  const alumniFilter  = document.querySelectorAll('.filter-btn[data-desig]');
+  const alumniRows    = document.querySelectorAll('.alumni-row');
   const alumniCountEl = document.getElementById('alumni-count');
 
   function filterAlumni() {
@@ -130,27 +141,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const activeDesig = [...alumniFilter].find(b => b.classList.contains('active'))?.dataset.desig || 'all';
     let count = 0;
     alumniRows.forEach(row => {
-      const name  = row.dataset.name || '';
-      const desig = row.dataset.desig || '';
-      const matchQ = name.includes(q);
-      const matchD = activeDesig === 'all' || desig.includes(activeDesig.toLowerCase());
-      const show = matchQ && matchD;
-      row.style.display = show ? '' : 'none';
-      if (show) count++;
+      const matchQ = (row.dataset.name || '').includes(q);
+      const matchD = activeDesig === 'all' || (row.dataset.desig || '').includes(activeDesig.toLowerCase());
+      row.style.display = (matchQ && matchD) ? '' : 'none';
+      if (matchQ && matchD) count++;
     });
     if (alumniCountEl) alumniCountEl.innerHTML = `Showing <span>${count}</span> alumni`;
   }
 
   if (alumniSearch) alumniSearch.addEventListener('input', filterAlumni);
-  alumniFilter.forEach(btn => {
-    btn.addEventListener('click', () => {
-      alumniFilter.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+  alumniFilter.forEach(b => {
+    b.addEventListener('click', () => {
+      alumniFilter.forEach(x => x.classList.remove('active'));
+      b.classList.add('active');
       filterAlumni();
     });
   });
 
-  /* Contact form */
+  /* ── Contact form ── */
   const form = document.getElementById('contact-form');
   if (form) {
     form.addEventListener('submit', e => {
@@ -162,4 +170,5 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => { sb.textContent = 'Send Message'; sb.style.background = ''; sb.style.color = ''; form.reset(); }, 3000);
     });
   }
+
 });

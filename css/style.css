@@ -114,7 +114,7 @@ ul { list-style: none; }
 .hero { position: relative; min-height: 100vh; display: flex; align-items: center; background: var(--navy); overflow: hidden; }
 .hero__bg { position: absolute; inset: 0; background-image: url('WMC5.png'); background-size: cover; background-position: center 30%; opacity: 0.28; }
 .hero__gradient { position: absolute; inset: 0; background: linear-gradient(120deg, rgba(13,27,62,0.96) 0%, rgba(13,27,62,0.75) 55%, rgba(15,76,92,0.35) 100%); }
-.hero__accent-line { display: none; }
+.hero__accent-line { position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: linear-gradient(180deg, transparent 0%, var(--champagne) 30%, var(--deep-teal) 70%, transparent 100%); }
 .hero__content { position: relative; z-index: 2; max-width: 720px; }
 .hero__eyebrow { font-family: var(--font-body); font-size: 11px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--champagne); margin-bottom: 20px; display: flex; align-items: center; gap: 14px; }
 .hero__eyebrow::before { content: ''; display: inline-block; width: 28px; height: 1px; background: var(--champagne); }
@@ -321,16 +321,12 @@ ul { list-style: none; }
 @media (max-width: 768px) {
   .container { padding: 0 20px; }
   .nav__menu { display: none; }
-  .nav__menu.open { display: flex; flex-direction: column; position: fixed; top: 72px; left: 0; right: 0; bottom: 0; background: var(--navy); padding: 28px; gap: 4px; overflow-y: auto; z-index: 999; }
+  .nav__menu.open { display: flex; flex-direction: column; position: fixed; top: 72px; left: 0; right: 0; bottom: 0; background: var(--navy); padding: 28px; gap: 4px; overflow-y: auto; }
   .nav__link { font-size: 15px; padding: 12px 0; }
   .nav__dropdown { display: none !important; position: static; border: none; background: rgba(255,255,255,0.05); box-shadow: none; padding-left: 16px; }
   .nav__item.open .nav__dropdown { display: block !important; }
   .nav__toggle { display: flex; }
   .pillars__grid { grid-template-columns: 1fr; }
-  /* Hero: stack photo below text on mobile — broad selectors to catch inline styles */
-  section[style*="min-height"] .container div[style*="grid"] { grid-template-columns: 1fr !important; }
-  section[style*="min-height"] .container div[style*="grid"] > div:last-child img { height: 260px !important; object-fit: cover; width: 100% !important; }
-  .hero__split { grid-template-columns: 1fr !important; }
   .stats-band__grid { grid-template-columns: repeat(2,1fr); }
   .testimonials__grid { grid-template-columns: 1fr; }
   .gallery__grid { grid-template-columns: repeat(2,1fr); }
@@ -863,31 +859,70 @@ ul { list-style: none; }
   .container { padding: 0 12px !important; }
 }
 
-/* ── TABLET + MOBILE FIXES (June 2026) ─────────────────────── */
-/* 1. Show hamburger + hide desktop nav at ≤1024px */
+/* ── MOBILE NAV FIXES ─────────────────────────── */
 @media (max-width: 1024px) {
+  .nav__logo img { height: 32px !important; width: auto !important; }
   .nav__toggle { display: flex !important; }
-  .nav__menu { display: none !important; }
-  .nav__menu.open { display: flex !important; flex-direction: column; position: fixed; top: 72px; left: 0; right: 0; bottom: 0; background: var(--navy); padding: 28px; gap: 4px; overflow-y: auto; z-index: 999; }
-  .nav__item.open .nav__dropdown { display: block !important; }
-  .nav__link { font-size: 15px; padding: 12px 0; }
-  .nav__dropdown { display: none !important; position: static; border: none; background: rgba(255,255,255,0.05); box-shadow: none; padding-left: 16px; }
-  /* Hero: collapse 2-col grid to single column */
-  section[style*="min-height"] .container div[style*="grid"] { grid-template-columns: 1fr !important; }
-  section[style*="min-height"] .container div[style*="grid"] > div:last-child img { height: 300px !important; object-fit: cover; width: 100% !important; }
-  .hero__split { grid-template-columns: 1fr !important; }
+
+  /* Hide desktop menu, show only when .open is set via JS inline style */
+  .nav__menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 72px;
+    left: 0; right: 0; bottom: 0;
+    background: #0D1B3E;
+    padding: 24px 28px;
+    gap: 0;
+    overflow-y: auto;
+    z-index: 999;
+  }
+  /* JS sets style.display directly — this ensures items are visible */
+  .nav__item {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+  }
+  .nav__link {
+    display: block !important;
+    visibility: visible !important;
+    font-size: 15px !important;
+    padding: 14px 0 !important;
+    border-bottom: 1px solid rgba(212,175,106,0.12) !important;
+    color: #B8C4D6 !important;
+  }
+  .nav__dropdown {
+    display: none !important;
+    position: static !important;
+    border: none !important;
+    background: rgba(255,255,255,0.04) !important;
+    box-shadow: none !important;
+    padding-left: 16px !important;
+  }
+  .nav__item.open .nav__dropdown {
+    display: block !important;
+  }
 }
-/* 2. Hide the gold left accent bar */
-.hero__accent-line { display: none !important; }
 
-/* ── MOBILE HERO + NAV FIXES v2 (June 2026) ──────────────── */
+/* ── MOBILE HERO PHOTO FIX ────────────────────── */
 @media (max-width: 1024px) {
-  /* Fix hero top gap — override inline padding on the grid div */
-  section[style*="min-height"] .container div[style*="padding"] { padding-top: 20px !important; padding-bottom: 20px !important; }
-
-  /* Fix hamburger menu: use attribute selector to beat specificity war */
-  ul.nav__menu { display: none !important; }
-  ul.nav__menu.open { display: flex !important; flex-direction: column !important; position: fixed !important; top: 72px !important; left: 0 !important; right: 0 !important; bottom: 0 !important; background: var(--navy) !important; padding: 28px !important; gap: 0 !important; overflow-y: auto !important; z-index: 1001 !important; }
-  ul.nav__menu.open li { display: block !important; visibility: visible !important; opacity: 1 !important; width: 100% !important; }
-  ul.nav__menu.open li a { display: block !important; visibility: visible !important; opacity: 1 !important; color: var(--silver) !important; font-size: 15px !important; padding: 14px 0 !important; border-bottom: 1px solid rgba(212,175,106,0.1) !important; }
+  .hero-new__frame-inner {
+    height: 300px !important;
+  }
+  .hero-new__photo {
+    position: absolute !important;
+    width: 100% !important;
+    height: auto !important;
+    top: -6% !important;
+    left: 0 !important;
+  }
+}
+@media (max-width: 640px) {
+  .hero-new__frame-inner {
+    height: 240px !important;
+  }
+  .hero-new__photo {
+    top: -4% !important;
+  }
 }
